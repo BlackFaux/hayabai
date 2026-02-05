@@ -12,7 +12,7 @@
       "all"
     ],
     "icon": "https://raw.githubusercontent.com/BlackFaux/hayabai/refs/heads/main/sukebei/icon.png",
-    "update": "https://raw.githubusercontent.com/BlackFaux/hayabai/refs/heads/main/manifest.json",
+    "update": "https://raw.githubusercontent.com/BlackFaux/hayabai/refs/heads/main/index.json",
     "code": "https://raw.githubusercontent.com/BlackFaux/hayabai/refs/heads/main/sukebei/index.js"
   }
 ]

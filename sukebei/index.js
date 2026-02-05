@@ -3,26 +3,20 @@ export default new class Sukebei {
 
   async single({ titles, episode }) {
     if (!titles?.length) return []
-    return this.search(titles, episode)
+    return this.search(titles[0], episode)
   }
   batch = this.single
   movie = this.single
 
-  async search(titles, episode) {
-    let results = [];
-    let firstTitle = true;
-    for (const title in titles) {
-      const query = title.replace(/[^\w\s-]/g, ' ').trim()
-      let episodeQuery = `${query} ${episode.toString().padStart(2, '0')}`
+  async search(title, episode) {
+    const query = title.replace(/[^\w\s-]/g, ' ').trim()
+    let episodeQuery = `${query} ${episode.toString().padStart(2, '0')}`
 
-      const episodeResponse = await fetch(this.base + encodeURIComponent(episodeQuery));
-      const episodeResults = await this.filterSeedless(episodeResponse, 'high', firstTitle);
-      const genericResponse = await fetch(this.base + encodeURIComponent(query));
-      const genericResults = await this.filterSeedless(genericResponse, 'medium', firstTitle);
-      results = [...results, ...episodeResults, ...genericResults];
-      firstTitle = false;
-    }
-    return results;
+    const episodeResponse = await fetch(this.base + encodeURIComponent(episodeQuery));
+    const episodeResults = await this.filterSeedless(episodeResponse, 'high');
+    const genericResponse = await fetch(this.base + encodeURIComponent(query));
+    const genericResults = await this.filterSeedless(genericResponse, 'medium');
+    return [...episodeResults, ...genericResults];
   }
 
   async filterSeedless(response, accuracy, firstTitle) {
@@ -39,7 +33,7 @@ export default new class Sukebei {
       size: this.calculateSize(item.size),
       date: new Date(item.time),
       accuracy,
-      type: firstTitle ? accuracy === 'high' ? 'best' : undefined : 'alt'
+      type: accuracy === 'high' ? 'best' : undefined
     }));
   }
 

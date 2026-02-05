@@ -3,16 +3,16 @@
     "name": "Sukebei Nyaa",
     "version": "1.0.0",
     "description": "Torrent extension for Nyaa (sukebei)",
-    "id": "hayase.torext.sukebei",
+    "id": "blackfaux.hayase.torext.sukebei",
     "type": "torrent",
     "accuracy": "medium",
     "ratio": 0,
-    "media": "nsfw",
+    "media": "both",
     "languages": [
       "all"
     ],
-    "icon": "https://raw.githubusercontent.com/BlackFaux/hayabai/refs/heads/main/sukebei/icon.png",
-    "update": "https://raw.githubusercontent.com/BlackFaux/hayabai/refs/heads/main/index.json",
-    "code": "https://raw.githubusercontent.com/BlackFaux/hayabai/refs/heads/main/sukebei/index.js"
+    "icon": "https://raw.githubusercontent.com/BlackFaux/hayabai/main/sukebei/icon.png",
+    "update": "https://raw.githubusercontent.com/BlackFaux/hayabai/main/index.json",
+    "code": "https://raw.githubusercontent.com/BlackFaux/hayabai/main/sukebei/index.js"
   }
 ]

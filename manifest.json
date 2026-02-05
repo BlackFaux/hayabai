@@ -11,8 +11,8 @@
     "languages": [
       "all"
     ],
-    "icon": "gh:BlackFaux/hayabai/sukebei/icon.png",
-    "update": "gh:BlackFaux/hayabai",
-    "code": "gh:BlackFaux/hayabai/sukebei"
+    "icon": "https://raw.githubusercontent.com/BlackFaux/hayabai/refs/heads/main/sukebei/icon.png",
+    "update": "https://raw.githubusercontent.com/BlackFaux/hayabai/refs/heads/main/manifest.json",
+    "code": "https://raw.githubusercontent.com/BlackFaux/hayabai/refs/heads/main/sukebei/index.js"
   }
 ]
